@@ -5,6 +5,7 @@ HTML:root {
 
   --one: #FFE6A7;
   --two: #FFEEC2;
+  /* --two: #FFF9EB; */
   /* --three: #B7B7A4; */
   --four: #6B705C;
   --five: #606553;
@@ -14,7 +15,8 @@ HTML:root {
   --aboutHeight: 100vh;
   --projectsHeight: 75vh;
   --skillsHeight: 75vh;
-  --containerPadding: 10vh;
+  --containerPadding: 144px;
+  --borderRadius: 10px;
 }
 
 a {
@@ -175,17 +177,17 @@ body {
 }
 
 /* ----------- TEXT ---------- */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .text {
     color: var(--text) !important;
   }
   .text-title {
-    font-size: 8.33vw;
+    font-size: 4.8387vw;
     font-weight: 600;
     margin-left: -2px;
   }
   .text-subtitle {
-    font-size: 5.55vw;
+    font-size: 3.2258vw;
     font-weight: 600;
   }
   .text-body {
@@ -193,18 +195,18 @@ body {
     font-weight: 300;
   }
   .text-small {
-    font-size: 3.469vw;
+    font-size: 2.419vw;
     font-weight: 300;
   }
   #not {
-    font-size: 2.38vw;
+    font-size: 2.016vw;
     vertical-align: text-top;
     position: relative;
     top: -0.87vw !important;
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
   .text {
     color: var(--text) !important;
   }
@@ -237,7 +239,8 @@ body {
 #introduction {
   min-height: var(--introductionHeight);
   width: 100%;
-  padding-top: 30vh;
+  padding-top: calc(var(--containerPadding) * 2);
+  padding-bottom: var(--containerPadding);
 }
 
 /* ----------- PROJECT SECTION ----------- */
@@ -252,7 +255,7 @@ body {
   background-color: #f4f3ee;
   z-index: 1;
   border: none;
-  border-radius: 25px;
+  border-radius: var(--borderRadius);
 }
 
 .p-card:hover {
@@ -261,10 +264,14 @@ body {
 }
 
 .p-card > img {
-  filter: grayscale(0%);
-  border-radius: 25px;
+  filter: grayscale(100%);
+  border-radius: var(--borderRadius);
   z-index: 0;
   transition: .2s;
+}
+
+.other {
+  /* filter: grayscale(100%); */
 }
 
 .p-card:hover > img {
@@ -285,7 +292,15 @@ body {
 /* --- PROJECT MODALS --- */
 .modal-content {
   border: none;
-  border-radius: 25px;
+  border-radius: var(--borderRadius);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-text-container {
+  /* min-height: 200px; */
 }
 
 .carousel-item {
@@ -316,7 +331,7 @@ body {
 #skills {
   min-height: var(--skillsHeight);
   padding-top: var(--containerPadding);
-  padding-bottom: var(--containerPaddig);
+  padding-bottom: var(--containerPadding);
 }
 
 .text-logo ~ svg {
@@ -332,8 +347,8 @@ body {
 #about {
   min-height: var(--aboutHeight);
   width: 100%;
-  padding-top: 15vh;
-  padding-bottom: 15vh;
+  padding-top: var(--containerPadding);
+  padding-bottom: var(--containerPadding)
 }
 
 #about-photo-1 {
