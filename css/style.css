@@ -261,7 +261,7 @@ body {
 }
 
 .p-card > img {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   border-radius: 25px;
   z-index: 0;
   transition: .2s;
