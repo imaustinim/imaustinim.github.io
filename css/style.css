@@ -191,7 +191,7 @@ body {
     font-weight: 600;
   }
   .text-body {
-    font-size: 4.173vw;
+    font-size: 2.173vw;
     font-weight: 300;
   }
   .text-small {
@@ -297,10 +297,13 @@ body {
 }
 
 .modal-body {
-  padding: 20px;
-  background-color: var(--two);
+  padding: 0 20px 20px 20px;
+  background-color: var(--three);
   border-bottom-left-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
+}
+
+.carousel-indicators {
 }
 
 .carousel-indicators > button {
@@ -314,7 +317,7 @@ body {
 }
 
 .carousel-item {
-  padding: 24px;
+  padding: 24px 24px 40px 24px;
 }
 
 .carousel-item > img {
