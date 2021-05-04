@@ -14,8 +14,8 @@ HTML:root {
   --topNavHeight: 72px;
   --introductionHeight: 100vh;
   --aboutHeight: 100vh;
-  --projectsHeight: 75vh;
-  --skillsHeight: 75vh;
+  --projectsHeight: 100vh;
+  --skillsHeight: 50vh;
   --containerPadding: 144px;
   --borderRadius: 10px;
 }
@@ -302,13 +302,14 @@ body {
 }
 
 .modal-body {
-  padding: 0 20px 20px 20px;
-  background-color: var(--three);
+  padding: 30px;
+  background-color: var(--two);
   border-bottom-left-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
 }
 
 .carousel-indicators {
+  bottom: 3px;
 }
 
 .carousel-indicators > button {
@@ -322,7 +323,7 @@ body {
 }
 
 .carousel-item {
-  padding: 24px 24px 40px 24px;
+  padding: 30px;
 }
 
 .carousel-item > img {
@@ -358,8 +359,8 @@ body {
 /* ----------- SKILLS SECTION ----------- */
 #skills {
   min-height: var(--skillsHeight);
-  padding-top: var(--containerPadding);
-  padding-bottom: var(--containerPadding);
+  /* padding-top: var(--containerPadding); */
+  /* padding-bottom: var(--containerPadding); */
 }
 
 .text-logo ~ svg {
@@ -389,7 +390,12 @@ body {
   height: 90px;
 }
 
-#quoteCarousel > .carousel-inner,
+#quoteCarousel > .carousel-inner {
+  height: 100%;
+  padding: 0;
+  background-color: var(--two);
+}
+
 #quoteCarousel > .carousel-inner > .carousel-item {
   height: 100%;
   padding: 0;
