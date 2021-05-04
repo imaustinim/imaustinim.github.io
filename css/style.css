@@ -12,9 +12,9 @@ HTML:root {
   --topNavHeight: 72px;
   --introductionHeight: 100vh;
   --aboutHeight: 100vh;
-  --projectsHeight: 100vh;
-  --skillsHeight: 100vh;
-  --contactHeight: 100vh;
+  --projectsHeight: 75vh;
+  --skillsHeight: 75vh;
+  --containerPadding: 10vh;
 }
 
 a {
@@ -42,12 +42,6 @@ body {
   height: 22px;
   font-size: 20px;
   font-weight: 300;
-}
-
-.nav-text:hover,
-.nav-icon:hover {
-  /* color: black; */
-  /* font-weight: 400; */
 }
 
 /* ----- TOP NAV ----- */
@@ -249,8 +243,8 @@ body {
 /* ----------- PROJECT SECTION ----------- */
 #projects {
   min-height: var(--projectsHeight);
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: var(--containerPadding);
+  padding-bottom: var(--containerPadding);
 }
 
 /* --- PROJECT CARDS --- */
@@ -270,19 +264,22 @@ body {
   filter: grayscale(100%);
   border-radius: 25px;
   z-index: 0;
+  transition: .2s;
 }
 
 .p-card:hover > img {
-  filter: grayscale(20%) blur(5px);
-  transition: .2s;
+  filter: grayscale(0%) blur(10px) opacity(.5);
+  transition: .2s ease-in-out;
 }
 
 .hide {
   display: none;
+  transition: .2s ease-in-out;
 }
 
 .p-card:hover .hide {
   display: flex;
+  transition: .2s ease-in-out;
 }
 
 /* --- PROJECT MODALS --- */
@@ -292,7 +289,8 @@ body {
 }
 
 .carousel-item {
-  padding: 24px;
+  padding-top: 24px;
+  padding-bottom: 0px;
 }
 
 .close-button {
@@ -317,8 +315,8 @@ body {
 /* ----------- SKILLS SECTION ----------- */
 #skills {
   min-height: var(--skillsHeight);
-  max-width: 720px;
-  padding-top: 1vh;
+  padding-top: var(--containerPadding);
+  padding-bottom: var(--containerPaddig);
 }
 
 .text-logo ~ svg {
@@ -335,6 +333,7 @@ body {
   min-height: var(--aboutHeight);
   width: 100%;
   padding-top: 15vh;
+  padding-bottom: 15vh;
 }
 
 #about-photo-1 {
