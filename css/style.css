@@ -9,6 +9,7 @@ HTML:root {
   /* --three: #B7B7A4; */
   --four: #6B705C;
   --five: #606553;
+  --six: #4A4F40;
 
   --topNavHeight: 72px;
   --introductionHeight: 100vh;
@@ -160,6 +161,10 @@ body {
   display: flex;
   align-items: flex-end;
   height: 40px;
+}
+
+.about-cta {
+  margin-top: auto;
 }
 
 /* ----------- PARTICLES CONTAINER ----------- */
