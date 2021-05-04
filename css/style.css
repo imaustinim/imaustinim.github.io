@@ -5,7 +5,7 @@ HTML:root {
 
   --one: #FFE6A7;
   --two: #FFEEC2;
-  /* --two: #FFF9EB; */
+  --three: #FFF9EB;
   /* --three: #B7B7A4; */
   --four: #6B705C;
   --five: #606553;
@@ -252,7 +252,7 @@ body {
 
 /* --- PROJECT CARDS --- */
 .p-card {
-  background-color: #f4f3ee;
+  background-color: var(--three);
   z-index: 1;
   border: none;
   border-radius: var(--borderRadius);
@@ -290,24 +290,44 @@ body {
 }
 
 /* --- PROJECT MODALS --- */
+
 .modal-content {
   border: none;
-  border-radius: var(--borderRadius);
+  height: fit-content !important;
 }
 
 .modal-body {
   padding: 20px;
+  background-color: var(--two);
+  border-bottom-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
 }
 
-.modal-text-container {
-  /* min-height: 200px; */
+.carousel-indicators > button {
+  background-color: var(--five) !important;
+}
+
+.carousel-inner {
+  background-color: var(--three);
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
 }
 
 .carousel-item {
-  padding-top: 24px;
-  padding-bottom: 0px;
+  padding: 24px;
 }
 
+.carousel-item > img {
+  vertical-align: middle !important;
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-item > img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: auto !important;
+  } 
+}
 .close-button {
   position: absolute;
   bottom: 10px;
