@@ -10,6 +10,7 @@ HTML:root {
   --five: #606553;
 
   --topNavHeight: 72px;
+  --introductionHeight: 100vh;
   --aboutHeight: 100vh;
   --projectsHeight: 100vh;
   --skillsHeight: 100vh;
@@ -45,8 +46,8 @@ body {
 
 .nav-text:hover,
 .nav-icon:hover {
-  color: black;
-  font-weight: 400;
+  /* color: black; */
+  /* font-weight: 400; */
 }
 
 /* ----- TOP NAV ----- */
@@ -133,7 +134,7 @@ body {
   z-index:1;
   text-decoration: none;
   transition: 0.3s ease-in-out;
-  height: 200vh;
+  height: 250px;
   width: 0px;
   position: absolute;
   background-color: var(--one);
@@ -169,8 +170,7 @@ body {
 #particles-js {
   z-index:-1;
   position: absolute;
-  min-height: var(--aboutHeight);
-  /* min-height: calc(var(--aboutHeight) - var(--topNavHeight)); */
+  min-height: var(--introductionHeight);
   width: 100%;
   background-color: var(--one);
   background-position: 50% 50%;
@@ -195,7 +195,11 @@ body {
     font-weight: 600;
   }
   .text-body {
-    font-size: 5.55vw;
+    font-size: 4.173vw;
+    font-weight: 300;
+  }
+  .text-small {
+    font-size: 3.469vw;
     font-weight: 300;
   }
   #not {
@@ -220,7 +224,11 @@ body {
     font-weight: 600;
   }
   .text-body {
-    font-size: 32px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .text-small {
+    font-size: 20px;
     font-weight: 300;
   }
   #not {
@@ -231,10 +239,9 @@ body {
   }
 }
 
-/* ----------- ABOUT SECTION ----------- */
-#about {
-  /* min-height: calc(var(--aboutHeight) - var(--topNavHeight)); */
-  min-height: var(--aboutHeight);
+/* ----------- INTRODUCTION SECTION ----------- */
+#introduction {
+  min-height: var(--introductionHeight);
   width: 100%;
   padding-top: 30vh;
 }
@@ -266,8 +273,8 @@ body {
 }
 
 .p-card:hover > img {
-  filter: grayscale(20%) blur(3px);
-  transition: .5s;
+  filter: grayscale(20%) blur(5px);
+  transition: .2s;
 }
 
 .hide {
@@ -321,4 +328,21 @@ body {
 .text-logo:hover + svg,
 .text-logo ~ svg:hover {
   filter: grayscale(0%)
+}
+
+/* ----------- ABOUT SECTION ----------- */
+#about {
+  min-height: var(--aboutHeight);
+  width: 100%;
+  padding-top: 15vh;
+}
+
+#about-photo-1 {
+  max-width:100%;
+  max-height:100%;
+}
+
+/* ----------- FOOTER ----------- */
+#footer {
+  background-color: var(--one);
 }
