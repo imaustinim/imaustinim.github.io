@@ -275,10 +275,6 @@ body {
   transition: .2s;
 }
 
-.other {
-  /* filter: grayscale(100%); */
-}
-
 .p-card:hover > img {
   filter: grayscale(0%) blur(10px) opacity(.5);
   transition: .2s ease-in-out;
@@ -295,7 +291,6 @@ body {
 }
 
 /* --- PROJECT MODALS --- */
-
 .modal-content {
   border: none;
   height: fit-content !important;
